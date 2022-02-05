@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Post from './Post';
 
 function App() {
+  const [id, setId] = useState(1);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={() => setId(1)}>1</button>
+      <button onClick={() => setId(2)}>2</button>
+      <button onClick={() => setId(3)}>3</button>
+      <button onClick={() => setId(4)}>4</button>
+      <button onClick={() => setId(5)}>5</button>
+      <button onClick={() => setId(6)}>6</button>
+      <button onClick={() => setId(7)}>7</button>
+      <button onClick={() => setId(8)}>8</button>
+      <button onClick={() => setId(9)}>9</button>
+      <button onClick={() => setId(10)}>10</button>
+      <div>
+        <h1>Posts</h1>
+        <Post id={id} />
+      </div>
     </div>
   );
 }
